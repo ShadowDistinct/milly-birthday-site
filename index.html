@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive birthday story for Milly</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Milonga&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scene" id="scene-intro">
+      <h1>Welcome to Milly's birthday adventure!</h1>
+      <p>It's Milly's birthday! A magical journey awaits us. Are you ready?</p>
+      <button onclick="goToScene('scene-1')">Let's go</button>
+    </div>
+
+    <div class="scene hidden" id="scene-1">
+      <h2>The Magical Forest</h2>
+      <p>You find yourself at the entrance of a magical forest. Do you:</p>
+      <button onclick="goToScene('scene-2A', 'enter-forest')">
+        Enter the forest
+      </button>
+      <button onclick="goToScene('scene-2B', 'stay-out')">
+        Stay out of the forest
+      </button>
+    </div>
+
+    <div class="scene hidden" id="scene-2A">
+      <h2>Inside the oh so very magical forest</h2>
+      <p>The forest is oddly empty, but suddenly theres a loud noise</p>
+      <button onclick="goToScene('scene-3A', 'Investigate')">
+        Investiage the noise
+      </button>
+      <button onclick="goToScene('scene-3B', 'Ignore')">
+        Ignore it like a gigachad
+      </button>
+    </div>
+
+    <div class="scene hidden" id="scene-2B">
+        <h2>Outside of the forest</h2>
+        <p>You decided to walk around the forest, it was a long walk and along the way you met a merchant. He said "Buy this potion to be able to have insane luck. Only for $5.99". You only have 10$, what will you do?</p>
+        <button onclick="goToScene('scene-3C', 'buy')">You decided to buy it.</button>
+        <button onclick="goToScene('scene-3D', 'refuse')">You decided to run away from him</button>
+    </div>  
+      
+     <div class="scene hidden" id="scene-3A">
+        <h2>The noise</h2>
+        <p>When you investigated the noise, you are met with a giant fucking dinosaur. It ate you</p>
+        <button onclick="restartStory()">You died a gruesome death.</button>   
+        </div>
+
+        <div class="scene hidden" id="scene-3B">
+            <h2>The walk</h2>
+            <p>You are walking through the forest and are met with a bridge that isnt fit for crossing. What will you do?</p>
+            <button onclick="goToScene('scene-4A', 'cross')">You decided to cross it.</button>
+            <button onclick="goToScene('scene-4B', 'Other')">You decided to find another way to pass the giant pit.</button>
+            </div>
+        
+            <div class="scene hidden" id="scene-3C">
+                <h2>The potion and its aftereffect</h2>
+                <p>The potion was actually grape juice. You died because ur allergic to grape.</p>
+                <button onclick="restartStory()">Truly the death of all time.</button>
+                </div>
+
+                <div class="scene hidden" id="scene-3D">
+                    <h2>The aftermath</h2>
+                    <p>When running away you suddenly trip down a hill and land in a pond. You see a cave, what will you do?</p>
+                    <button onclick="goToScene('scene-4C', 'enter')">You decided to enter it.</button>
+                    <button onclick="goToScene('scene-4D', 'ignore')">You decide not to enter</button>
+                    </div>
+
+                    <div class="scene hidden" id="scene-4A">
+                        <h2>The bridge</h2>
+                        <p>You fall down 1000ft downward towards ur death, but hey atleast it was fun while it lasted.</p>
+                        <button onclick="restartStory()">Good job.</button>
+                    </div>
+
+                    <div class="scene hidden" id="scene-4B">
+                        <h2>The other way around</h2>
+                        <p>You decided to find another way, nightfalls but you managed to find the place that Maja told you about. Its beatiful as expected. You are then surprised by maja and ur brother.</p>
+                        <button onclick="goToScene('scene-completion')">Happy Birthday Milly!</button>
+                        </div>
+
+                        <div class="scene hidden" id="scene-4C">
+                            <h2>The cave</h2>
+                            <p>You found a treasure chest with SOOOOO MUCH MONEY THAT YOU COULD BUY A DOMINUS WITH IT. You decide to not come to the place Maja invited you to because ur filthy rich</p>
+                            <button onclick="goToScene('scene-completion-bad')"></button>
+                            </div>
+
+                            <div class="scene hidden" id="scene-4D">
+                                <h2>Where to now?</h2>
+                                <p>You decided not to go to the cave and is lost inside the forest, when night falls you hear Maja and ur brother calling out ur name, they found you and bring you to the place you were supposed to find. They surprise you with alot of gifts</p>
+                                <button onclick="goToScene('scene-completion')"></button>
+                                </div>
+
+                                <div class="scene hidden" id="scene-completion">
+                                    <h1>Happy birthday</h1>
+                                    <p></p>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
