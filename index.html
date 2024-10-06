@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Interactive birthday story for Milly</title>
+    <title>Interactive Birthday Story for Milly</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Milonga&display=swap"
@@ -10,16 +10,31 @@
     />
   </head>
   <body>
+    <header>
+        <img src="cake.png">
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('scene-intro')">Interactive Story</a></li>
+            <li><a href="#" onclick="showSection('quiz-section')">Birthday Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+
     <div class="scene" id="scene-intro">
-      <h1>Welcome to Milly's birthday adventure!</h1>
-      <p>It's Milly's birthday! A magical journey awaits us. Are you ready?</p>
+      <h1>Welcome to Milly's Birthday Adventure!</h1>
+      <div class="flex-text">
+          <p>It's Milly's birthday! A magical journey awaits us. Are you ready?</p>
+      </div>
       <button onclick="goToScene('scene-1')">Let's go</button>
     </div>
+
 
     <div class="scene hidden" id="scene-1">
       <h2>The Magical Forest</h2>
       <img src="forest.png" alt="Magical forest" class="story-image">
-      <p>You find yourself at the entrance of a magical forest. Do you:</p>
+      <div class="flex-text">
+          <p>You find yourself at the entrance of a magical forest. Do you:</p>
+      </div>
       <button onclick="goToScene('scene-2A', 'enter-forest')">
         Enter the forest
       </button>
@@ -29,10 +44,12 @@
     </div>
 
     <div class="scene hidden" id="scene-2A">
-      <h2>Inside the oh so very magical forest</h2>
-      <p>The forest is oddly empty, but suddenly theres a loud noise</p>
+      <h2>Inside the Oh So Very Magical Forest</h2>
+      <div class="flex-text">
+          <p>The forest is oddly empty, but suddenly there's a loud noise.</p>
+      </div>
       <button onclick="goToScene('scene-3A', 'Investigate')">
-        Investiage the noise
+        Investigate the noise
       </button>
       <button onclick="goToScene('scene-3B', 'Ignore')">
         Ignore it like a gigachad
@@ -40,66 +57,161 @@
     </div>
 
     <div class="scene hidden" id="scene-2B">
-        <h2>Outside of the forest</h2>
-        <p>You decided to walk around the forest, it was a long walk and along the way you met a merchant. He said "Buy this potion to be able to have insane luck. Only for $5.99". You only have 10$, what will you do?</p>
+        <h2>Outside of the Forest</h2>
+        <img src="merchant.png" alt="Merchant" class="story-image1">
+        <div class="flex-text">
+            <p>You decided to walk around the forest. It was a long walk, and along the way you met a merchant. He said, "Buy this potion to be able to have insane luck. Only for $5.99". You only have $10. What will you do?</p>
+        </div>
         <button onclick="goToScene('scene-3C', 'buy')">You decided to buy it.</button>
-        <button onclick="goToScene('scene-3D', 'refuse')">You decided to run away from him</button>
+        <button onclick="goToScene('scene-3D', 'refuse')">You decided to run away from him.</button>
     </div>  
-      
-     <div class="scene hidden" id="scene-3A">
-        <h2>The noise</h2>
-        <p>When you investigated the noise, you are met with a giant fucking dinosaur. It ate you</p>
-        <button onclick="restartStory()">You died a gruesome death.</button>   
+
+    <div id="ending-display">
+        <div class="scene hidden" id="scene-3A">
+            <h2>The Noise</h2>
+            <div class="flex-text">
+                <p>When you investigated the noise, you are met with a giant fucking dinosaur. It ate you.</p>
+            </div>
+            <button onclick="restartStory()">You died a gruesome death.</button>   
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene-3B">
+        <h2>The Walk</h2>
+        <img src="bridgepng.png" alt="Bridge" class="story-image1">
+        <div class="flex-text">
+            <p>You are walking through the forest and are met with a bridge that isn't fit for crossing. What will you do?</p>
+        </div>
+        <button onclick="goToScene('scene-4A', 'cross')">You decided to cross it.</button>
+        <button onclick="goToScene('scene-4B', 'Other')">You decided to find another way to pass the giant pit.</button>
+    </div>
+
+    <div class="scene hidden" id="scene-3C">
+        <h2>The Potion and Its Aftereffect</h2>
+        <div class="flex-text">
+            <p>The potion was actually grape juice. You died because you're allergic to grapes.</p>
+        </div>
+        <button onclick="restartStory()">Truly the death of all time.</button>
+    </div>
+
+    <div class="scene hidden" id="scene-3D">
+        <h2>The Aftermath</h2>
+        <img src="cave.png" alt="Cave" class="story-image">
+        <div class="flex-text">
+            <p>When running away, you suddenly trip down a hill and land in a pond. You see a cave. What will you do?</p>
+        </div>
+        <button onclick="goToScene('scene-4C', 'enter')">You decided to enter it.</button>
+        <button onclick="goToScene('scene-4D', 'ignore')">You decide not to enter.</button>
+    </div>
+
+    <div class="scene hidden" id="scene-4A">
+        <h2>The Bridge</h2>
+        <div class="flex-text">
+            <p>You fall down 1000ft towards your death, but hey, at least it was fun while it lasted.</p>
+        </div>
+        <button onclick="restartStory()">Good job.</button>
+    </div>
+
+    <div class="scene hidden" id="scene-4B">
+        <h2>The Other Way Around</h2>
+        <div class="flex-text">
+            <p>You decided to find another way. Night falls, but you manage to find the place that Maja told you about. It's beautiful as expected. You are then surprised by Maja and your brother.</p>
+        </div>
+        <button onclick="goToScene('scene-completion')">Happy Birthday Milly!</button>
+    </div>
+        
+    <div class="scene hidden" id="scene-4C">
+        <h2>The Cave</h2>
+        <div class="flex-text">
+            <p>You found a treasure chest with SOOOOO MUCH MONEY THAT YOU COULD BUY A DOMINUS WITH IT. You decide not to come to the place Maja invited you to because you're filthy rich.</p>
+        </div>
+        <button onclick="goToScene('scene-completion-bad')">Maja is sad :(</button>
+    </div>
+
+    <div class="scene hidden" id="scene-4D">
+        <h2>Where to Now?</h2>
+        <div class="flex-text">
+            <p>You decided not to go to the cave and are lost inside the forest. When night falls, you hear Maja and your brother calling out your name. They found you and bring you to the place you were supposed to find. They surprise you with a lot of gifts.</p>
+        </div>
+        <button onclick="goToScene('scene-completion')">Happy Birthday!</button>
+    </div>
+
+    <div class="scene hidden" id="scene-completion">
+        <h1>Happy Birthday!</h1>
+        <p>Happy birthday Millie! Me and your brother wish you a happy birthday! Hope you live your life with nothing but happiness. Your brother said he wishes for you to become a lesbian. I wish you become rich and you could lend some cash for me UwU. Anyway, Happy birthday! We hope you enjoyed our present for you! Cheers.</p>
+   
+    </div>
+
+
+    <div id="quiz-section" class="section hidden">
+        <h1>Happy Birthday, Milly! 🎉</h1>
+        <p>Answer this fun quiz!</p>
+
+        
+
+        <!-- Quiz questions -->
+         <div id="quiz-questions">
+        <div class="quiz-question">
+            <p>If you could have ANY superpower below, which would you pick :3?</p>
+            <button class="quiz-option" onclick="recordAnswer(1, 'flying', this)">Flying</button>
+            <button class="quiz-option" onclick="recordAnswer(1, 'invisibility', this)">Invisibility</button>
+            <button class="quiz-option" onclick="recordAnswer(1, 'super-strength', this)">Super Strength</button>                                    
         </div>
 
-        <div class="scene hidden" id="scene-3B">
-            <h2>The walk</h2>
-            <p>You are walking through the forest and are met with a bridge that isnt fit for crossing. What will you do?</p>
-            <button onclick="goToScene('scene-4A', 'cross')">You decided to cross it.</button>
-            <button onclick="goToScene('scene-4B', 'Other')">You decided to find another way to pass the giant pit.</button>
-            </div>
+        <div class="quiz-question">
+            <p>If you could get a vacation from anywhere in this list, which one would it be?</p>
+            <button class="quiz-option" onclick="recordAnswer(2, 'Las-vegas', this)">Las Vegas</button>
+            <button class="quiz-option" onclick="recordAnswer(2, 'Paris', this)">Paris</button>
+            <button class="quiz-option" onclick="recordAnswer(2, 'Tokyo', this)">Tokyo</button>
+        </div>
+
+        <div class="quiz-question"> 
+            <p>What's your go-to dessert?</p>
+            <button class="quiz-option" onclick="recordAnswer(2, 'cookie', this)"> Cookie </button>
+            <button class="quiz-option" onclick="recordAnswer(2, 'cake', this)"> Cake </button>
+            <button class="quiz-option" onclick="recordAnswer(2, 'ice-cream', this)">Ice Cream </button> 
+        </div>
+
+        <div class="quiz-question">
+            <p>If you are addicted to something, what will you do?</p>
+            <button class="quiz-option" onclick="recordAnswer(3, 'quit', this)">Quit</button>
+            <button class="quiz-option" onclick="recordAnswer(3, 'continue', this)">Continue doing it</button>
+            <button class="quiz-option" onclick="recordAnswer(3, 'none', this)">I won't have one</button>
+        </div>    
+
+        <div class="quiz-question">
+            <p>What are your opinions on femboys?</p>
+            <button class="quiz-option" onclick="recordAnswer(4, 'Like', this)">I like them</button>
+            <button class="quiz-option" onclick="recordAnswer(4, 'Dislike', this)">I don't like them</button>
+            <button class="quiz-option" onclick="recordAnswer(4,'Neutral', this)">I'm not sure</button>
+        </div>
+
+        <div class="quiz-question">
+            <p>Which of these are your favorite animals?</p>
+            <button class="quiz-option" onclick="recordAnswer(5, 'Dog', this)"> Dog</button>  
+            <button class="quiz-option" onclick="recordAnswer(5, 'Cat', this)"> Cat </button> 
+            <button class="quiz-option" onclick="recordAnswer(5, 'Bird', this)"> Bird </button>
+        </div>
         
-            <div class="scene hidden" id="scene-3C">
-                <h2>The potion and its aftereffect</h2>
-                <p>The potion was actually grape juice. You died because ur allergic to grape.</p>
-                <button onclick="restartStory()">Truly the death of all time.</button>
-                </div>
+        <div class="quiz-question">
+            <p>Which movie would you want to star in?</p>
+            <button class="quiz-option" onclick="recordAnswer(6, 'Avenger', this)">The Avengers</button>
+            <button class="quiz-option" onclick="recordAnswer(6, 'Harry-potter', this)">Harry Potter</button>
+            <button class="quiz-option" onclick="recordAnswer(6, 'FNAF', this)">Five Nights at Freddy's</button>
+        </div>
 
-                <div class="scene hidden" id="scene-3D">
-                    <h2>The aftermath</h2>
-                    <p>When running away you suddenly trip down a hill and land in a pond. You see a cave, what will you do?</p>
-                    <button onclick="goToScene('scene-4C', 'enter')">You decided to enter it.</button>
-                    <button onclick="goToScene('scene-4D', 'ignore')">You decide not to enter</button>
-                    </div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <p id="quiz-error" class="error hidden">Please select an answer before submitting.</p>
+    </div>
 
-                    <div class="scene hidden" id="scene-4A">
-                        <h2>The bridge</h2>
-                        <p>You fall down 1000ft downward towards ur death, but hey atleast it was fun while it lasted.</p>
-                        <button onclick="restartStory()">Good job.</button>
-                    </div>
+        <div id="quiz-result" class="section hidden">
+            <h2>Quiz Results</h2>
+            <p id="quiz-feedback"></p>
+            <button id="retry-button">Retry</button>
+        </div>
+    </div>
 
-                    <div class="scene hidden" id="scene-4B">
-                        <h2>The other way around</h2>
-                        <p>You decided to find another way, nightfalls but you managed to find the place that Maja told you about. Its beatiful as expected. You are then surprised by maja and ur brother.</p>
-                        <button onclick="goToScene('scene-completion')">Happy Birthday Milly!</button>
-                        </div>
-
-                        <div class="scene hidden" id="scene-4C">
-                            <h2>The cave</h2>
-                            <p>You found a treasure chest with SOOOOO MUCH MONEY THAT YOU COULD BUY A DOMINUS WITH IT. You decide to not come to the place Maja invited you to because ur filthy rich</p>
-                            <button onclick="goToScene('scene-completion-bad')"></button>
-                            </div>
-
-                            <div class="scene hidden" id="scene-4D">
-                                <h2>Where to now?</h2>
-                                <p>You decided not to go to the cave and is lost inside the forest, when night falls you hear Maja and ur brother calling out ur name, they found you and bring you to the place you were supposed to find. They surprise you with alot of gifts</p>
-                                <button onclick="goToScene('scene-completion')"></button>
-                                </div>
-
-                                <div class="scene hidden" id="scene-completion">
-                                    <h1>Happy birthday</h1>
-                                    <p></p>
-
+    <footer><p>Made with ❤️ by Maja</p></footer>
 
     <script src="script.js"></script>
   </body>
