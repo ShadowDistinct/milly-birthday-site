@@ -2,7 +2,7 @@ body {
     font-family: 'Milonga', sans-serif;
     background-color: black;
     background-image: url(quiz.png);
-    color: #333;
+    color: rgb(236, 33, 236);
     text-align: center;
     padding-top: 80px; /* Space for fixed header */
     position: relative;

@@ -140,7 +140,7 @@ const quizData = [
   
   function showResult() {
     quiz.innerHTML = `
-      <h1>Quiz Completed!</h1>
+      <h1>Trivia Completed!</h1>
       <p>Your score: ${score}/${quizData.length}</p>
     `;
   }
