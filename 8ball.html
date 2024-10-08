@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+                                   initial-scale=1.0"
+    />
+    <!-- Link to custom css -->
+    <link rel="stylesheet" href="8ball.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Milonga&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="8ball.png" type="image/x-icon" />
+    <title>Magic 8 Ball</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="cake.png" />
+      <nav>
+        <ul>
+          <li><a href="index.html#interactive-story">Interactive Story</a></li>
+          <li><a href="quiz.html">Undertale Trivia</a></li>
+          <li><a href="8ball.html">Maja's magic ball</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1>Maja's big black ball</h1>
+      <div class="questionBox">
+        <h3>Enter What you want to ask my ball</h3>
+        <input
+          type="text"
+          name="fortuneQuestion"
+          id="fortuneQuestion"
+          placeholder="Enter ur question here"
+        />
+      </div>
+      <div id="ball">
+        <div id="answer">
+          <p class="answerText">8</p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <table id="questionAnswerTable">
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Answer</th>
+          </tr>
+        </thead>
+        <tbody class="tableBody"></tbody>
+      </table>
+    </footer>
+    <footer><p>Made with ❤️ by Maja</p></footer>
+    <script src="8ball.js"></script>
+  </body>
+</html>

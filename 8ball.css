@@ -1,0 +1,288 @@
+/* Universal selector to set some styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Milonga", sans-serif;
+}
+
+body {
+  font-family: "Milonga", sans-serif;
+  background-color: black;
+  background-image: url();
+  color: black;
+  text-align: center;
+  padding-top: 80px; /* Space for fixed header */
+  position: relative;
+  overflow-y: auto; /* Allow vertical scrolling if necessary */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  align-items: center;
+}
+
+/* Our Heading section */
+header {
+  margin: 6px;
+  padding: 6px;
+  text-align: center;
+}
+
+nav {
+  margin: 20px 0; /* Space below header */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #0a0f2a;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #1c1c1c;
+}
+header {
+  background-color: #0a0f2a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+header img {
+  height: 60px; /* Slightly smaller than header height */
+}
+
+h1 {
+  text-align: center;
+  color: #e9e7e7;
+}
+
+/* Main section box where the ball and the question is */
+main {
+  margin: 1svh;
+  padding: 1svh;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px 0px gray;
+}
+
+/* Heading inside the main section */
+main h2 {
+  margin: 1svh;
+}
+
+/* Question input box styling */
+#fortuneQuestion {
+  width: 50%;
+  padding: 16px;
+  margin: 2svh 1svw;
+  border-radius: 12px;
+  border: 1px solid #000;
+  background-color: #e9e7e7;
+  font-size: large;
+  color: black;
+}
+
+#fortuneQuestion::placeholder {
+  font-size: large;
+}
+
+/* Magic eight ball black part */
+#ball {
+  width: 50vw;
+  height: 50vw;
+  max-width: 500px;
+  max-height: 500px;
+  background: radial-gradient(circle, rgb(78, 78, 78) 0%, black 100%);
+  border-radius: 50%;
+  margin: 5vw auto;
+}
+
+/* The white circle inside the Magic eight ball */
+#answer {
+  width: 20vw;
+  height: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: calc(50% - min(10vw, 100px));
+  margin: auto;
+  /* line-height: min(20vw, 200px); */
+  display: flex;
+  cursor: pointer;
+}
+
+/* The big 8 Text inside magic eight ball */
+#answer > .answerText {
+  color: black;
+  font-size: min(15vw, 120px);
+  margin: auto;
+  padding: 1vw;
+}
+
+/* A small rotating animation whenever we hover on it */
+#answer:hover {
+  transform: rotate(360deg);
+  transition: transform 0.3s;
+}
+
+/* Styles to be used once the answer is displayed */
+#answer.answerDisplayed {
+  background-color: lightgreen;
+  box-shadow: inset 0px 0px 4px 0px #4ce74c;
+}
+
+#answer.answerDisplayed > .answerText {
+  font-size: medium;
+  display: block;
+  white-space: normal;
+}
+
+/* All the styling for the table that will log question ans answers */
+#questionAnswerTable th {
+  padding: 3svh 10vw;
+  width: 100svw;
+  background-color: lightgreen;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid green;
+  font-size: large;
+  text-align: center;
+  color: black;
+  box-shadow: 0px 0px 4px 0px gray;
+}
+
+#questionAnswerTable {
+  border-collapse: separate;
+  margin: 3vh;
+  display: none;
+}
+
+#questionAnswerTable td {
+  border: 1px solid #4ce74c;
+  padding: 1svh 10vw;
+  width: 100svw;
+  background-color: rgb(162, 249, 162);
+  text-align: center;
+  box-shadow: 0px 0px 4px 0px gray;
+  white-space: normal;
+}
+
+.tableBody :nth-last-child(1) > td {
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.shake {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+}
+
+/* Fade out animation frames */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Fade in animation frames */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Color change animation frames */
+@keyframes colorChange {
+  0% {
+    background-color: white;
+    box-shadow: none;
+  }
+
+  100% {
+    background-color: lightgreen;
+    box-shadow: inset 0px 0px 4px 0px #4ce74c;
+  }
+}
+
+footer {
+  background-color: #0a0f2a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
