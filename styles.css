@@ -211,3 +211,20 @@ footer {
   box-sizing: border-box;
 }
 
+.presents{
+height: 60px;
+object-fit: cover;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  max-width: 300px; /* set a maximum width */
+}
+
+.image-container img {
+  max-width: 100%; /* scale image to fit container */
+  height: auto; /* preserve aspect ratio */
+  object-fit: cover; /* scale and crop image */
+}
