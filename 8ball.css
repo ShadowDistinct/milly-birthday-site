@@ -74,6 +74,12 @@ h1 {
   color: #e9e7e7;
 }
 
+h3 {
+  text-align: center;
+  color: #e9e7e7;
+}
+
+
 /* Main section box where the ball and the question is */
 main {
   margin: 1svh;
@@ -286,3 +292,18 @@ footer {
   width: 100%;
   box-sizing: border-box;
 }
+.spider-web {
+  position: absolute;
+  right: 10px; /* Aligns the web to the right edge */
+  top: -10px; /* Adjusts position so it appears to hang from the header */
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px; /* Adjusts the web size */
+}
+
+
+.spider-web:hover {
+  color: purple; /* Changes the color when hovered */
+}
+
+

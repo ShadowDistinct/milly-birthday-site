@@ -1,0 +1,40 @@
+body {
+    background-color: #f2e6d9;
+    color: #5e2d2f;
+    font-family: 'Cursive', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #a02941;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.spider-tea-party {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spider-tea-party img.treat {
+    margin: 0 10px;
+    width: 100px;
+    height: auto;
+}
+
+button {
+    background-color: #d1a0b1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #a02941;
+}

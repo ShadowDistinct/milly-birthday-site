@@ -147,3 +147,11 @@ button:hover {
         transform: scale(0.95); /* Optional: Slight zoom effect for a more dramatic fade */
     }
 }
+
+.bone {
+  position: absolute;
+  left: 10px; /* Aligns the web to the right edge */
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px; /* Adjusts the web size */
+}
