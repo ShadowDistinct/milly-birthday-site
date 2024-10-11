@@ -1,0 +1,104 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: #1c1c1c; /* Dark background like the game */
+  color: #ffffff; /* Light text for contrast */
+  margin: 0;
+  padding-top: 80px; /* Space for the header */
+}
+
+.Quiz {
+  font-family: "Press Start 2P", cursive;
+}
+.quiz-question {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #00bfff; /* Border to match Sans */
+  border-radius: 8px;
+  background-color: #2b2b2b; /* Darker background for quiz questions */
+}
+label {
+  display: block; /* Make each radio option a block */
+  margin: 10px 0; /* Spacing between options */
+  cursor: pointer;
+}
+.feedback {
+  font-size: 14px; /* Feedback font size */
+  margin-top: 10px; /* Space between feedback and options */
+}
+button {
+  background-color: #00bfff; /* Button color */
+  color: #000000; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Button font size */
+  display: block; /* Make button a block element */
+  margin: 20px auto; /* Center the button */
+}
+button:hover {
+  background-color: #1e90ff; /* Lighter blue on hover */
+}
+
+nav {
+  margin: 20px 0; /* Space below header */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #2aa198;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #268986;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust as needed */
+  background-color: #000000; /* Dark background for header */
+  color: #ffffff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+header img {
+  height: 60px; /* Slightly smaller than header height */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+nav ul li a {
+  color: #00bfff; /* Sans-themed blue */
+  text-decoration: none;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}

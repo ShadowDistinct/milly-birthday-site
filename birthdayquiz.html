@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday quiz FOR MIWWYYYYY UWU</title>
+    <link rel="stylesheet" href="birthdayquiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <header>
+            <img src="cake.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Interactive Story</a></li>
+                <li><a href="birthdayquiz.html">Birthday Quiz</a></li>
+                <li><a href="quiz.html">Undertale Trivia</a></li>
+                <li><a href="8ball.html">Maja's magic ball</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="Quiz">
+        <h1>Happy Birthday, Milly! 🎉</h1>
+        <p>Answer this fun quiz!</p>
+    
+        <div id="quiz-questions">
+            <!-- Quiz questions -->
+            <div class="quiz-question">
+                <p>If you could have any superpower, which would you pick?</p>
+                <label><input type="radio" name="q1" value="Flying" onclick="showFeedback(1, 'Flying')"> Flying</label>
+                <label><input type="radio" name="q1" value="Invisibility" onclick="showFeedback(1, 'Invisibility')"> Invisibility</label>
+                <label><input type="radio" name="q1" value="Super Strength" onclick="showFeedback(1, 'Super Strength')"> Super Strength</label>
+                <div id="feedback-q1" class="feedback"></div>
+            </div>
+    
+            <div class="quiz-question">
+                <p>Which vacation destination would you choose?</p>
+                <label><input type="radio" name="q2" value="Las Vegas" onclick="showFeedback(2, 'Las Vegas')"> Las Vegas</label>
+                <label><input type="radio" name="q2" value="Paris" onclick="showFeedback(2, 'Paris')"> Paris</label>
+                <label><input type="radio" name="q2" value="Tokyo" onclick="showFeedback(2, 'Tokyo')"> Tokyo</label>
+                <div id="feedback-q2" class="feedback"></div>
+            </div>
+    
+            <div class="quiz-question">
+                <p>What's your favorite dessert?</p>
+                <label><input type="radio" name="q3" value="Cookie" onclick="showFeedback(3, 'Cookie')"> Cookie</label>
+                <label><input type="radio" name="q3" value="Cake" onclick="showFeedback(3, 'Cake')"> Cake</label>
+                <label><input type="radio" name="q3" value="Ice Cream" onclick="showFeedback(3, 'Ice Cream')"> Ice Cream</label>
+                <div id="feedback-q3" class="feedback"></div>
+            </div>
+    
+            <div class="quiz-question">
+                <p>What's your favorite animal?</p>
+                <label><input type="radio" name="q4" value="Dog" onclick="showFeedback(4, 'Dog')"> Dog</label>
+                <label><input type="radio" name="q4" value="Cat" onclick="showFeedback(4, 'Cat')"> Cat</label>
+                <label><input type="radio" name="q4" value="Bird" onclick="showFeedback(4, 'Bird')"> Bird</label>
+                <div id="feedback-q4" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>Which movie would you star in?</p>
+                <label><input type="radio" name="q5" value="Avenger" onclick="showFeedback(5,'Avenger')">The Avengers </label>
+                <label><input type="radio" name="q5" value="Harry-potter" onclick="showFeedback(5,'Harry-potter')">Harry Potter </label>
+                <label><input type="radio" name="q5" value="FNAF" onclick="showFeedback(5,'FNAF')">FNAF </label>
+                <div id="feedback-q5" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>Out of these Games, which is ur favorite?</p>
+                <label><input type="radio" name="q6" value="FNAF" onclick="showFeedback(6,'FNAF')">FNAF </label>
+                <label><input type="radio" name="q6" value="Undertale" onclick="showFeedback(6,'Undertale')">Undertale </label>
+                <label><input type="radio" name="q6" value="None" onclick="showFeedback(6,'None')">None of the above </label>
+                <div id="feedback-q6" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>Which of these undertale character would you choose as ur favorite?</p>
+                <label><input type="radio" name="q7" value="Asgore" onclick="showFeedback(7,'Asgore')">Asgore </label>
+                <label><input type="radio" name="q7" value="Temmie" onclick="showFeedback(7,'Temmie')">Temmie </label>
+                <label><input type="radio" name="q7" value="AnnoyingDog" onclick="showFeedback(7,'AnnoyingDog')">Annoying Dog</label>
+                <div id="feedback-q7" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>Which of the main cast of FNAF would you consider ur favorite?</p>
+                <label><input type="radio" name="q8" value="Freddy" onclick="showFeedback(8,'Freddy')">Freddy </label>
+                <label><input type="radio" name="q8" value="Chica" onclick="showFeedback(8,'Chica')">Chica </label>
+                <label><input type="radio" name="q8" value="Bonnie" onclick="showFeedback(8,'Bonnie')">Bonnie </label>
+                <div id="feedback-q8" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>Do you like the website so far?</p>
+                <label><input type="radio" name="q9" value="Yes" onclick="showFeedback(9,'Yes')">Yes </label>
+                <label><input type="radio" name="q9" value="No" onclick="showFeedback(9,'No')">No </label>
+                <label><input type="radio" name="q9" value="Idk" onclick="showFeedback(9,'Idk')">Idk </label>
+                <div id="feedback-q9" class="feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <p>If you were replaying Undertale, which route would you take?</p>
+                <label><input type="radio" name="q10" value="Pacifist" onclick="showFeedback(10,'Pacifist')">Pacifist </label>
+                <label><input type="radio" name="q10" value="Genocide" onclick="showFeedback(10,'Genocide')">Genocide</label>
+                <label><input type="radio" name="q10" value="Neutral" onclick="showFeedback(10,'Neutral')">Neutral </label>
+                <div id="feedback-q10" class="feedback"></div>
+            </div>
+    
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+    
+        <div id="quiz-result" style="display: none;">
+            <h2>Quiz Results</h2>
+            <p id="quiz-feedback"></p>
+            <button onclick="resetQuiz()">Try Again</button>
+        </div>
+        </div>
+
+        <script src="birthdayquiz.js"></script>
+</body>
+</html>

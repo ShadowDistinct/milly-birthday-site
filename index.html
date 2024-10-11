@@ -17,7 +17,7 @@
     <nav>
         <ul>
             <li><a href="#" onclick="showSection('scene-intro')">Interactive Story</a></li>
-            <li><a href="#" onclick="showSection('quiz-section')">Birthday Quiz</a></li>
+            <li><a href="birthdayquiz.html">Birthday Quiz</a></li>
             <li><a href="quiz.html">Undertale Trivia</a></li>
             <li><a href="8ball.html">Maja's magic ball</a></li>
         </ul>
@@ -172,79 +172,7 @@
                         </div>
                         </a>
                 </div>
-                   
-   
     </div>
-
-
-    <div id="quiz-section" class="section hidden">
-        <h1>Happy Birthday, Milly! 🎉</h1>
-        <p>Answer this fun quiz!</p>
-
-        
-
-        <!-- Quiz questions -->
-         <div id="quiz-questions">
-        <div class="quiz-question">
-            <p>If you could have ANY superpower below, which would you pick :3?</p>
-            <button class="quiz-option" onclick="recordAnswer(1, 'flying', this)">Flying</button>
-            <button class="quiz-option" onclick="recordAnswer(1, 'invisibility', this)">Invisibility</button>
-            <button class="quiz-option" onclick="recordAnswer(1, 'super-strength', this)">Super Strength</button>                                    
-        </div>
-
-        <div class="quiz-question">
-            <p>If you could get a vacation from anywhere in this list, which one would it be?</p>
-            <button class="quiz-option" onclick="recordAnswer(2, 'Las-vegas', this)">Las Vegas</button>
-            <button class="quiz-option" onclick="recordAnswer(2, 'Paris', this)">Paris</button>
-            <button class="quiz-option" onclick="recordAnswer(2, 'Tokyo', this)">Tokyo</button>
-        </div>
-
-        <div class="quiz-question"> 
-            <p>What's your go-to dessert?</p>
-            <button class="quiz-option" onclick="recordAnswer(2, 'cookie', this)"> Cookie </button>
-            <button class="quiz-option" onclick="recordAnswer(2, 'cake', this)"> Cake </button>
-            <button class="quiz-option" onclick="recordAnswer(2, 'ice-cream', this)">Ice Cream </button> 
-        </div>
-
-        <div class="quiz-question">
-            <p>If you are addicted to something, what will you do?</p>
-            <button class="quiz-option" onclick="recordAnswer(3, 'quit', this)">Quit</button>
-            <button class="quiz-option" onclick="recordAnswer(3, 'continue', this)">Continue doing it</button>
-            <button class="quiz-option" onclick="recordAnswer(3, 'none', this)">I won't have one</button>
-        </div>    
-
-        <div class="quiz-question">
-            <p>What are your opinions on femboys?</p>
-            <button class="quiz-option" onclick="recordAnswer(4, 'Like', this)">I like them</button>
-            <button class="quiz-option" onclick="recordAnswer(4, 'Dislike', this)">I don't like them</button>
-            <button class="quiz-option" onclick="recordAnswer(4,'Neutral', this)">I'm not sure</button>
-        </div>
-
-        <div class="quiz-question">
-            <p>Which of these are your favorite animals?</p>
-            <button class="quiz-option" onclick="recordAnswer(5, 'Dog', this)"> Dog</button>  
-            <button class="quiz-option" onclick="recordAnswer(5, 'Cat', this)"> Cat </button> 
-            <button class="quiz-option" onclick="recordAnswer(5, 'Bird', this)"> Bird </button>
-        </div>
-        
-        <div class="quiz-question">
-            <p>Which movie would you want to star in?</p>
-            <button class="quiz-option" onclick="recordAnswer(6, 'Avenger', this)">The Avengers</button>
-            <button class="quiz-option" onclick="recordAnswer(6, 'Harry-potter', this)">Harry Potter</button>
-            <button class="quiz-option" onclick="recordAnswer(6, 'FNAF', this)">Five Nights at Freddy's</button>
-        </div>
-
-        <button onclick="submitQuiz()">Submit Quiz</button>
-        <p id="quiz-error" class="error hidden">Please select an answer before submitting.</p>
-    </div>
-
-        <div id="quiz-result" class="section hidden">
-            <h2>Quiz Results</h2>
-            <p id="quiz-feedback"></p>
-            <button id="retry-button">Retry</button>
-        </div>
-    </div>
-
     <footer><p>Made with ❤️ by Maja</p></footer>
 
     <script src="script.js"></script>
