@@ -1,0 +1,37 @@
+body {
+    background-color: #f0f0f0; /* Light background */
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    padding: 20px;
+}
+.riddle {
+    margin: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.input-container {
+    margin: 20px 0;
+}
+.input-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #FFDA44;
+    border-radius: 5px;
+}
+.submit-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #FFDA44;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-button:hover {
+    background-color: #f76d6d; /* Change color on hover */
+}
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #141214;
+}

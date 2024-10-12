@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Undertale Memory Matching Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="annoyingdog2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Undertale Memory Matching Game</h1>
+        </header>
+        <p>SOLVE THIS PUZZLE TO GET TO THE NEXT LEVEL NYEHEHEHE</p>
+
+        <section class="score-panel">
+            <span class="moves">0</span> Move(s)
+            <div class="restart" onclick="startGame()">
+                <i class="fa fa-repeat"></i>
+            </div>
+        </section>
+
+        <ul class="deck" id="card-deck"></ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations 🎉</h2>
+                <a class="close" href="#">×</a>
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id="finalMove"> </span> moves </p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Play again 😄
+                </button>
+            </div>
+        </div>
+        <button><a href="annoyingdog3.html" style="text-decoration: none; color: white;">Go to next level</a></button>
+    </div>
+    
+        <p>(PLEASE DO THIS AFTER U FINISH MATCHING, IM TOO LAZY TO FIGURE OUT HOW TO ONLY SHOW IT WHEN U FINISH IT AND ALSO TO MAKE IT EASIER FOR ME TO TROUBLESHOOT)</p>
+    <script src="annoyingdog2.js"></script>
+</body>
+</html>

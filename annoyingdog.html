@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND THE DOGGY</title>
+    <link rel="stylesheet" href="annoyingdog.css">
+</head>
+<body>
+    <div id="find-annoying-dog">
+        <h2>Can You Find the Annoying Dog?</h2>
+        <p>Click on the image to find the Annoying Dog!</p>
+        <p>Zoom if you have to!</p>
+        <div id="image-container" onclick="checkForDog(event)">
+            <img src="papyrusRoomWithTail.png" alt="Hidden scene" id="hidden-scene" style="width: 500px; height: auto;">
+        </div>
+        
+        <p id="find-result"></p>
+        <button id="next-level-btn" style="display: none;" onclick="goToNextLevel()">Next Level</button>
+    </div>
+    <script src="annoyingdog.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asgore's Royal Advice</title>
+    <link rel="stylesheet" href="asgore.css">
+    <link rel="icon" href="AsgoreFace.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Ask King Asgore for Advice</h1>
+    <img src="asgore.png" alt="RAAAA DADDDY">
+    <p>Asgore, the wise king, is here to guide you. Ask him any question, and he will provide advice fit for a royal!</p>
+
+    <!-- Advice Form -->
+    <form id="asgore-advice">
+        <label for="question">Your question:</label><br>
+        <input type="text" id="question" name="question" placeholder="What's your question?" required><br>
+        <button type="button" onclick="getAdvice()">Ask Asgore</button>
+    </form>
+
+    <!-- Response Section -->
+    <p id="advice-response"></p>
+
+    <script src="asgore.js"></script>
+</body>
+</html>

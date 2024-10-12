@@ -1,0 +1,47 @@
+.congratulation-message {
+    background-color: #FFD700; /* Gold background */
+    color: #141214; /* Dark text color */
+    border: 5px dashed #A4FF4D; /* Green dashed border */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive; /* Fun font choice */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.congratulation-message h2 {
+    font-size: 2rem; /* Larger title */
+    color: #FFDA44; /* Bright title color */
+    text-shadow: 1px 1px 2px #A4FF4D; /* Subtle shadow for the title */
+}
+
+.congratulation-message p {
+    font-size: 1.2rem; /* Slightly larger text for readability */
+}
+
+.congratulation-message .dog-icon {
+    font-size: 4rem; /* Larger icon size for emphasis */
+}
+a {
+    display: inline-block; /* Allows padding and margin to work properly */
+    padding: 10px 20px; /* Padding for a button-like effect */
+    background-color: #FFDA44; /* Gold background matching the theme */
+    color: #141214; /* Dark text color for contrast */
+    font-family: 'Permanent Marker', cursive; /* Fun font style */
+    font-size: 1.2rem; /* Slightly larger font size */
+    border: 2px solid #A4FF4D; /* Green border for a fun touch */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+a:hover {
+    background-color: #A4FF4D; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    color: #141214; /* Keep text color the same */
+}
+
+a:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}

@@ -9,7 +9,6 @@
 html, body {
   height: 100vh;
   width: 100vw;
-  
 }
 
 body {
@@ -227,4 +226,13 @@ object-fit: cover;
   max-width: 100%; /* scale image to fit container */
   height: auto; /* preserve aspect ratio */
   object-fit: cover; /* scale and crop image */
+}
+
+.trident {
+  position: absolute;
+  bottom: 50px; /* Distance from the footer */
+  left: 50%; /* Move the image to the horizontal center */
+  transform: translateX(-50%); /* Properly center the image */
+  max-width: 100px; /* Set a max width for the image */
+  height: auto; /* Maintain aspect ratio */
 }
