@@ -64,7 +64,7 @@
         <h2>Outside of the Forest</h2>
         <img src="merchant.png" alt="Merchant" class="story-image1">
         <div class="flex-text">
-            <p>You decided to walk around the forest. It was a long walk, and along the way you met a merchant. He said, "Buy this potion to be able to have insane luck. Only for $5.99". You only have $10. What will you do?</p>
+            <p>You decided to walk around the forest. It was a long walk, and along the way you met a merchant. He said, "Buy this potion to be able to have insane luck. Only for $5.99". You only have $10. What will you do? Also totally random he mentions someone named <a href="asgore.html" target="_blank">Asgore</a> and how he always ask this '<a href="asgore.html" target="_blank">Asgore</a>' for advice</p>
         </div>
         <button onclick="goToScene('scene-3C', 'buy')">You decided to buy it.</button>
         <button onclick="goToScene('scene-3D', 'refuse')">You decided to run away from him.</button>
@@ -138,12 +138,13 @@
             <p>You decided not to go to the cave and are lost inside the forest. When night falls, you hear Maja and your brother calling out your name. They found you and bring you to the place you were supposed to find. They surprise you with a lot of gifts.</p>
         </div>
         <button onclick="goToScene('scene-completion')">Happy Birthday!</button>
-        <button onclick="window.location.href='annoyingdog.html'">You see something at the corner of ur eyes</button>
     </div>
 
     <div class="scene hidden" id="scene-completion">
         <h1>Happy Birthday!</h1>
         <p> Happy birthday Milly! Me and your brother wish you a happy birthday! Hope you live your life with nothing but happiness. Your brother said he wishes for you to become a lesbian. I wish you become rich and you could lend some cash for me UwU. Anyway, Happy birthday! We hope you enjoyed our present for you! Cheers.</p>
+
+        
         
         <p>Look! Theres presents! Which one would you open?</p>
         <div class="image-container">
@@ -173,14 +174,22 @@
                         </div>
                         </a>
                 </div>
-                <div class="trident">
-                <a href="asgore.html" target="_blank">
-                    <img src="AsgoreTrident.png" alt="Trident brrrrrr">
-                </a>
-                </div>
     </div>
-    <footer><p>Made with ❤️ by Maja</p></footer>
+    <footer><p>Made with <a href="annoyingdog.html" style="text-decoration: none;" onclick="myFunction()">❤️</a> by Maja</p></footer>
+    <script>
+         function myFunction() {
+    let person = prompt("Solve this riddle: I’m a dog who’s known for causing a fuss, in the game, I often create a big plus. With a bark and a grin, I might steal the show, but you’ll find me where chaos and laughter grow. Who am I?");
 
+    const acceptableAnswers = ["the annoying dog", "annoying dog", "annoyingdog", "the annoyingdog"];
+    
+    if (person && acceptableAnswers.includes(person.toLowerCase())) {
+      alert("Correct! You may now continue.");
+      window.location.href = "annoyingdog.html";
+    } else {
+      alert("That's not correct! Try again.");
+    }
+  }
+        </script>
     <script src="script.js"></script>
     <script src="fade.js"></script>
   </body>

@@ -160,3 +160,12 @@ button:hover {
   text-decoration: none;
   font-size: 24px; /* Adjusts the web size */
 }
+
+a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: white; /* Keep the color white on hover */
+}

@@ -42,18 +42,21 @@ nav li {
 
 nav a {
   text-decoration: none;
-  background-color: #0a0f2a;
+  background-color: hotpink; /* Mettaton's signature pink */
   padding: 10px 20px;
   color: white;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 0px 10px 2px rgba(255, 20, 147, 0.5); /* Pink glow */
 }
 
 nav a:hover {
-  background-color: #1c1c1c;
+  background-color: deeppink; /* Brighter pink on hover */
+  box-shadow: 0px 0px 15px 5px rgba(255, 105, 180, 0.7); /* Intense glow on hover */
 }
+
 header {
-  background-color: #0a0f2a;
+  background-color: black; /* Sleek black for contrast */
   position: fixed;
   top: 0;
   left: 0;
@@ -63,8 +66,8 @@ header {
   align-items: center;
   padding-left: 40px;
   z-index: 1000; /* Ensure header is above other content */
+  box-shadow: 0px 0px 15px hotpink; /* Pink glow around header */
 }
-
 header img {
   height: 60px; /* Slightly smaller than header height */
 }
@@ -119,6 +122,7 @@ main h2 {
   background: radial-gradient(circle, rgb(78, 78, 78) 0%, black 100%);
   border-radius: 50%;
   margin: 5vw auto;
+  box-shadow: 0 0 20px hotpink;
 }
 
 /* The white circle inside the Magic eight ball */
@@ -137,12 +141,24 @@ main h2 {
   cursor: pointer;
 }
 
+.flashy-text {
+  animation: flashy 2s infinite alternate;
+}
+
+@keyframes flashy {
+  0% { color: hotpink; }
+  100% { color: white; }
+}
+
 /* The big 8 Text inside magic eight ball */
 #answer > .answerText {
   color: black;
   font-size: min(15vw, 120px);
   margin: auto;
   padding: 1vw;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-shadow: 0 0 10px hotpink;
 }
 
 /* A small rotating animation whenever we hover on it */
@@ -153,8 +169,9 @@ main h2 {
 
 /* Styles to be used once the answer is displayed */
 #answer.answerDisplayed {
-  background-color: lightgreen;
-  box-shadow: inset 0px 0px 4px 0px #4ce74c;
+  background-color: silver; /* Metallic look for a futuristic vibe */
+  color: black;
+  border: 2px solid darkpurple; /* Purple borders to match Mettaton’s theme */
 }
 
 #answer.answerDisplayed > .answerText {
@@ -167,9 +184,9 @@ main h2 {
 #questionAnswerTable th {
   padding: 3svh 10vw;
   width: 100svw;
-  background-color: lightgreen;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid green;
+  background-color: silver; /* Metallic look for a futuristic vibe */
+  color: black;
+  border: 2px solid darkpurple; /* Purple borders to match Mettaton’s theme */
   font-size: large;
   text-align: center;
   color: black;
@@ -183,10 +200,10 @@ main h2 {
 }
 
 #questionAnswerTable td {
-  border: 1px solid #4ce74c;
+  border: 2px solid darkpurple;
   padding: 1svh 10vw;
   width: 100svw;
-  background-color: rgb(162, 249, 162);
+  background-color:silver;
   text-align: center;
   box-shadow: 0px 0px 4px 0px gray;
   white-space: normal;
@@ -270,7 +287,6 @@ main h2 {
   }
 }
 
-/* Color change animation frames */
 @keyframes colorChange {
   0% {
     background-color: white;
@@ -278,20 +294,23 @@ main h2 {
   }
 
   100% {
-    background-color: lightgreen;
-    box-shadow: inset 0px 0px 4px 0px #4ce74c;
+    background-color: hotpink; /* Mettaton's vibrant pink */
+    box-shadow: inset 0px 0px 4px 0px #ff69b4; /* Soft pink shadow */
   }
 }
 
 footer {
-  background-color: #0a0f2a;
-  color: white;
+  background-color: black; /* Match the header for a cohesive look */
+  color: hotpink; /* Mettaton's color for the text */
   text-align: center;
   padding: 20px;
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  border-top: 2px solid hotpink; /* Pink border on top */
+  box-shadow: 0px 0px 10px 2px hotpink; /* Pink glow */
 }
+
 .spider-web {
   position: absolute;
   right: 10px; /* Aligns the web to the right edge */
@@ -306,4 +325,8 @@ footer {
   color: purple; /* Changes the color when hovered */
 }
 
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: hotpink;
+}
 

@@ -236,3 +236,12 @@ object-fit: cover;
   max-width: 100px; /* Set a max width for the image */
   height: auto; /* Maintain aspect ratio */
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :hover{
+  color:black;
+}

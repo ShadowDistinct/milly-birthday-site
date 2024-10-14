@@ -20,7 +20,7 @@ const quizData = [
         answer: "Sans"
     },
     {
-        question: "5. What is the name of Papyrus's signature attack?",
+        question: "5. What is the name of <a href='papyrus.html' target='_blank'>Papyrus</a>'s signature attack?",
         options: ["Blue attack", "Gaster Blaster", "Bone attack", "Noodle attack"],
         answers: "Bone attack"
     },
@@ -107,19 +107,21 @@ const quizData = [
   
   let currentQuestion = 0;
   let score = 0;
-  
+
   function showQuestion() {
     const question = quizData[currentQuestion];
-    questionElement.innerText = question.question;
-  
-    optionsElement.innerHTML = "";
+    questionElement.innerHTML = question.question; // Use innerHTML for the question
+
+    optionsElement.innerHTML = ""; // Clear previous options
+
     question.options.forEach(option => {
-      const button = document.createElement("button");
-      button.innerText = option;
-      optionsElement.appendChild(button);
-      button.addEventListener("click", selectAnswer);
+        const button = document.createElement("button");
+        button.innerText = option; // Keep the options as plain text
+        optionsElement.appendChild(button);
+        button.addEventListener("click", selectAnswer);
     });
-  }
+}
+
   
   function selectAnswer(e) {
     const selectedButton = e.target;

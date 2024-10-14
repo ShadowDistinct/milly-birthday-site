@@ -39,32 +39,17 @@ button:hover {
   background-color: #1e90ff; /* Lighter blue on hover */
 }
 
-nav {
-  margin: 20px 0; /* Space below header */
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-nav li {
-  display: inline;
-}
-
 nav a {
   text-decoration: none;
-  background-color: #2aa198;
-  padding: 10px 20px;
+  background-color:#1e90ff;
+  padding: 10px 5px;
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
-nav a:hover {
-  background-color: #268986;
+nav a:hover{
+  background-color: #1c6cd3;
+  padding: 10px;
 }
 
 header {
@@ -114,4 +99,5 @@ h2 {
   transform: translateX(-50%); /* Properly center the image */
   max-width: 100px; /* Set a max width for the image */
   height: auto; /* Maintain aspect ratio */
+
 }
